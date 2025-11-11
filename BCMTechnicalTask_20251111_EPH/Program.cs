@@ -110,8 +110,10 @@ namespace BCMTechnicalTask
 
             Console.WriteLine("\n|=============== Credit Score Report ===============| \n");
 
+            //Call the method to calculate the credit scores for customers.
             List<CustomerOutput> _results = CreditScoreCalculations.CalculateCreditScore(_customerList);
 
+            //loop through and print results to console
             for (int i = 0; i < _results.Count; i++)
             {
                 Console.WriteLine("|=== Customer Number " + (i + 1).ToString() + " ===|\n\n"
@@ -120,8 +122,8 @@ namespace BCMTechnicalTask
                     + "Risk profile: " + _results[i].RiskProfile + "\n");
             }
 
-            JArray _printResults = JsonConvert.DeserializeObject<JArray>(JsonConvert.SerializeObject(_results.ToArray()));
-            File.WriteAllText("CreditResults.json", _printResults.ToString(Formatting.Indented));
+            JArray _printResults = JsonConvert.DeserializeObject<JArray>(JsonConvert.SerializeObject(_results.ToArray())); //convert list to json array for printing to file
+            File.WriteAllText("CreditResults.json", _printResults.ToString(Formatting.Indented)); //Print result array to json file.
             Console.WriteLine("\n|=============== Thank you for using this service. ===============| \n");
         }
     }
