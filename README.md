@@ -1,6 +1,9 @@
 # BCMTechnicalTask_EH
 Creating a basic credit risk management application that can evaluate customer credit scores and generate alerts for high risk customers.
 
+## Packages required to run this project
+1. Newtonsoft.json
+   
 ## Take-Home Technical Task
 
 ### Task Overview
