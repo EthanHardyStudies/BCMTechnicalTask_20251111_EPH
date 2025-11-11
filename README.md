@@ -113,3 +113,24 @@ Identify customers with a credit score below 50. These are considered "high risk
 ]
 
  ```
+#### Output
+
+``` json
+[
+  {
+    "Name": "Alice",
+    "RiskProfile": "LOW",
+    "CreditScore": 55.5
+  },
+  {
+    "Name": "Bob",
+    "RiskProfile": "HIGH",
+    "CreditScore": 34
+  },
+  {
+    "Name": "Charlie",
+    "RiskProfile": "HIGH",
+    "CreditScore": 45.6
+  }
+]
+```
