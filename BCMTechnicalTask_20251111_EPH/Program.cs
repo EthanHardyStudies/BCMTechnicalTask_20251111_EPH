@@ -24,7 +24,7 @@ namespace BCMTechnicalTask
                 bool _validID = false; //declare boolean to allow for looping if the input is not an integer.
                 while (!_validID)
                 {
-                    Console.Write("Enter customer ID:\n");
+                    Console.Write("\nEnter customer ID:\n");
                     bool _idParse = int.TryParse(Console.ReadLine(), out _idTemp); //Try parse the input value
                     if (_idParse && _idTemp >= 1) //Check if value was parsed correctly and is positive
                     {
@@ -33,13 +33,13 @@ namespace BCMTechnicalTask
                     }
                     else
                     {
-                        Console.WriteLine("Please enter a valid customer ID of type integer.\n"); //if the value was not parsed successfully display and error for the user.
+                        Console.WriteLine("Please enter a valid customer ID of type integer."); //if the value was not parsed successfully display and error for the user.
                     }
                 }
 
 
                 //Ask user to enter the customers name
-                Console.Write("Enter the customers name:\n");
+                Console.Write("\nEnter the customers name:\n");
                 _customer.Name = Console.ReadLine();
 
                 //Ask user to enter the payment history score
@@ -47,7 +47,7 @@ namespace BCMTechnicalTask
                 bool _validPayHist = false; //declare boolean to allow for looping if the input is not an integer.
                 while (!_validPayHist)
                 {
-                    Console.Write("Enter customers payment history score (0 - 100):\n");
+                    Console.Write("\nEnter customers payment history score (0 - 100):\n");
                     bool _payHistParse = int.TryParse(Console.ReadLine(), out _payHistTemp); //Try parse the input value
                     if (_payHistParse && (_payHistTemp >= 0 && _payHistTemp <= 100))//Check if value was parsed correctly and is between 0 and 100
                     {
@@ -56,7 +56,7 @@ namespace BCMTechnicalTask
                     }
                     else
                     {
-                        Console.WriteLine("Please enter a valid payment history score of type integer.\n");//if the value was not parsed successfully display and error for the user.
+                        Console.WriteLine("Please enter a valid payment history score of type integer.");//if the value was not parsed successfully display and error for the user.
                     }
                 }
 
@@ -65,7 +65,7 @@ namespace BCMTechnicalTask
                 bool _validcreditUt = false; //declare boolean to allow for looping if the input is not an integer.
                 while (!_validcreditUt)
                 {
-                    Console.Write("Enter the customers credit utilization score (0 - 100):\n");
+                    Console.Write("\nEnter the customers credit utilization score (0 - 100):\n");
                     bool _creditUtParse = int.TryParse(Console.ReadLine(), out _creditUtTemp); //Try parse the input value
                     if (_creditUtParse && (_creditUtTemp >= 0 && _creditUtTemp <= 100))//Check if value was parsed correctly and is between 0 and 100
                     {
@@ -74,7 +74,7 @@ namespace BCMTechnicalTask
                     }
                     else
                     {
-                        Console.WriteLine("Please enter a valid credit utilization score of type integer.\n");//if the value was not parsed successfully display and error for the user.
+                        Console.WriteLine("Please enter a valid credit utilization score of type integer.");//if the value was not parsed successfully display and error for the user.
                     }
                 }
 
@@ -83,7 +83,7 @@ namespace BCMTechnicalTask
                 bool _validCreditAge = false; //declare boolean to allow for looping if the input is not an integer.
                 while (!_validCreditAge)
                 {
-                    Console.Write("Enter the age of the customers credit history (in years):\n");
+                    Console.Write("\nEnter the age of the customers credit history (in years):\n");
                     bool _creditAgeParse = int.TryParse(Console.ReadLine(), out _creditAgeTemp); //Try parse the input value
                     if (_creditAgeParse && _creditAgeTemp >= 0) //Check if value was parsed correctly and is positive
                     {
@@ -92,7 +92,7 @@ namespace BCMTechnicalTask
                     }
                     else
                     {
-                        Console.WriteLine("Please enter a valid credit history age of type integer.\n");//if the value was not parsed successfully display and error for the user.
+                        Console.WriteLine("Please enter a valid credit history age of type integer.");//if the value was not parsed successfully display and error for the user.
                     }
                 }
 
@@ -100,7 +100,7 @@ namespace BCMTechnicalTask
                 _customerList.Add(_customer); 
 
                 //Ask user to decide if they want to continue adding customers
-                Console.Write("Would you like to input another customers details for your report? (Y/N)\n");
+                Console.Write("\nWould you like to input another customers details for your report? (Y/N)\n");
                 string _continue = Console.ReadLine();
                 if (_continue.ToLower() == "n") 
                 {
